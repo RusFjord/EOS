@@ -1,12 +1,20 @@
-;;kernel.asm
-bits 32			;nasm directive - 32 bit
-section .text
-        ;multiboot spec
-        align 4
-        dd 0x1BADB002            ;magic
-        dd 0x00                  ;flags
-        dd - (0x1BADB002 + 0x00) ;checksum. m+f+c should be zero
+section .multiboot_header
+header_start:
+    dd 0xe85250d6                ; магическое число (multiboot 2)
+    dd 0                         ; архитектура 0 (защищённый режим i386)
+    dd header_end - header_start ; длина заголовка
+    ; контрольная сумма
+    dd 0x100000000 - (0xe85250d6 + 0 + (header_end - header_start))
 
+    ; вставьте опциональные `multiboot` тэги здесь
+
+    ; требуется завершающий тэг
+    dw 0    ; тип
+    dw 0    ; флаги
+    dd 8    ; размер
+header_end:
+section .text
+bits 32	
 global start
 extern kmain	        ;kmain is defined in the c file
 
