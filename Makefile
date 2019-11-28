@@ -9,12 +9,15 @@ RM=rm -f -r
 
 project_structure:
 	${MKDIR} ${BUILD_DIR}
+library: boot
+	#cd ./library && make library && cd ..
+	make -C ./library
 boot: project_structure boot.asm
 	${ASM} ${ASM_FLAGS} boot.asm -o ${BUILD_DIR}/boot.o
 kernel: project_structure kernel.c
 	${CC} ${CC_FLAGS} kernel.c -o ${BUILD_DIR}/kernel.o
-link: boot kernel link.ld
-	${LD} -m elf_i386 -T link.ld -o ${BUILD_DIR}/kernel.bin ${BUILD_DIR}/boot.o ${BUILD_DIR}/kernel.o
+link: boot kernel library link.ld
+	${LD} -m elf_i386 -T link.ld -o ${BUILD_DIR}/kernel.bin ${BUILD_DIR}/boot.o ${BUILD_DIR}/library.o ${BUILD_DIR}/kernel.o
 iso: link
 	${MKDIR} ${BUILD_DIR}/isofiles/boot/grub
 	cp grub.cfg ${BUILD_DIR}/isofiles/boot/grub
