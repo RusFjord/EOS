@@ -6,9 +6,7 @@ header_start:
     ; контрольная сумма
     dd 0x100000000 - (0xe85250d6 + 0 + (header_end - header_start))
 
-    ; вставьте опциональные `multiboot` тэги здесь
-
-    ; требуется завершающий тэг
+    ; завершающий тэг
     dw 0    ; тип
     dw 0    ; флаги
     dd 8    ; размер
@@ -16,14 +14,14 @@ header_end:
 section .text
 bits 32	
 global start
-extern kmain	        ;kmain is defined in the c file
+extern kmain	        ; kmain определена в файле Си
 
 start:
-  cli 			;block interrupts
-  mov esp, stack_space	;set stack pointer
-  call kmain
-  hlt		 	;halt the CPU
+  cli 			; блокировка исключений
+  mov esp, stack_space	; указатель на стек
+  call kmain ;Вызов функции
+  hlt		 	; остановка процессора
 
 section .bss
-resb 8192		;8KB for stack
+resb 8192		; 8 Кб для стека 
 stack_space:
