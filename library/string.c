@@ -4,17 +4,17 @@
 #include "string.h"
 #include "constants.h"
 
-char* video_memory = (char*)VIDEO_MEMORY_ADDRESS;
+uint8* video_memory = (uint8*)VIDEO_MEMORY_ADDRESS;
 
-void print_string(char row, char col, char* str) {
+void print_string(uint8 row, uint8 col, char* str) {
 
-    unsigned int i = (row * 80 + col) * 2;
-    unsigned int j = 0;
+    uint32 i = (row * 80 + col) * 2;
+    uint32 j = 0;
     while(str[j] != '\0') {
 		video_memory[i] = str[j];
 		video_memory[i+1] = BACKGROUND_COLOR_DEFALT;
 		++j;
-		i = i + 2;
+		i += 2;
 	}
 }
 
