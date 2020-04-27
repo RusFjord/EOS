@@ -1,3 +1,13 @@
+/**
+ * @file constants.h
+ * @author Федор Ендовицкий (f.endovitskiy@ulteam8.ru)
+ * @brief Определение основных констант
+ * @version 0.1
+ * @date 2020-04-27
+ * 
+ * @copyright Copyright (c) 2020
+ * 
+ */
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
