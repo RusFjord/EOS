@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleOS: Файл library/screen.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleOS
+   </div>
+   <div id="projectbrief">Разработка простой операционной системы в учебных целях</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3d620c6b6fdb93ed3bc6186215bde2e.html">library</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл screen.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Работа с экраном в текстовом режиме  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;types.h&quot;</code><br />
+</div>
+<p><a href="screen_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a9dbb6c251337c03c078dc330caee48d2"><td class="memItemLeft" align="right" valign="top"><a id="a9dbb6c251337c03c078dc330caee48d2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="screen_8h.html#a9dbb6c251337c03c078dc330caee48d2">screen_init</a> ()</td></tr>
+<tr class="memdesc:a9dbb6c251337c03c078dc330caee48d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация экрана <br /></td></tr>
+<tr class="separator:a9dbb6c251337c03c078dc330caee48d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4953d1edcbbfc7e420c423ded1d5621a"><td class="memItemLeft" align="right" valign="top"><a id="a4953d1edcbbfc7e420c423ded1d5621a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="screen_8h.html#a4953d1edcbbfc7e420c423ded1d5621a">clear_screen</a> ()</td></tr>
+<tr class="memdesc:a4953d1edcbbfc7e420c423ded1d5621a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очистка экрана <br /></td></tr>
+<tr class="separator:a4953d1edcbbfc7e420c423ded1d5621a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ebe31376dedaba17004775c554fe93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="screen_8h.html#ae9ebe31376dedaba17004775c554fe93">set_cursor</a> (uint8 row, uint8 col)</td></tr>
+<tr class="memdesc:ae9ebe31376dedaba17004775c554fe93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка курсора  <a href="#ae9ebe31376dedaba17004775c554fe93">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae9ebe31376dedaba17004775c554fe93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Работа с экраном в текстовом режиме </p>
+<dl class="section author"><dt>Автор</dt><dd>Федор Ендовицкий (<a href="#" onclick="location.href='mai'+'lto:'+'f.e'+'nd'+'ovi'+'ts'+'kiy'+'@u'+'lte'+'am'+'8.r'+'u'; return false;">f.end<span style="display: none;">.nosp@m.</span>ovit<span style="display: none;">.nosp@m.</span>skiy@<span style="display: none;">.nosp@m.</span>ulte<span style="display: none;">.nosp@m.</span>am8.r<span style="display: none;">.nosp@m.</span>u</a>) </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>27-04-2020 </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="screen_8h_source.html">screen.h</a></p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="ae9ebe31376dedaba17004775c554fe93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ebe31376dedaba17004775c554fe93">&#9670;&nbsp;</a></span>set_cursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_cursor </td>
+          <td>(</td>
+          <td class="paramtype">uint8&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка курсора </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>Колонка курсора </td></tr>
+    <tr><td class="paramname">col</td><td>Строка курсора </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="screen_8c_source.html">screen.c</a> строка <a class="el" href="screen_8c_source.html#l00031">31</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

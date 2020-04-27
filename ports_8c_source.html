@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleOS: Исходный файл library/ports.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleOS
+   </div>
+   <div id="projectbrief">Разработка простой операционной системы в учебных целях</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3d620c6b6fdb93ed3bc6186215bde2e.html">library</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ports.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ports_8h.html">ports.h</a>&quot;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="ports_8h.html#a34feca64a4f1e4dc09a64e8693f63bfa">    3</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="ports_8h.html#a34feca64a4f1e4dc09a64e8693f63bfa">inb</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port) {</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> result;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    __asm__(<span class="stringliteral">&quot;in %%dx, %%al&quot;</span> : <span class="stringliteral">&quot;=a&quot;</span> (result) : <span class="stringliteral">&quot;d&quot;</span> (port));</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> result;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="ports_8h.html#adde48f21caf0656a9a6a054e6ea0e211">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ports_8h.html#adde48f21caf0656a9a6a054e6ea0e211">outb</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> data) {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    __asm__(<span class="stringliteral">&quot;out %%al, %%dx&quot;</span> : : <span class="stringliteral">&quot;a&quot;</span> (data), <span class="stringliteral">&quot;d&quot;</span> (port));</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="ports_8h.html#a28b0dbe809800b41ca4afa986f98ffaa">   14</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="ports_8h.html#a28b0dbe809800b41ca4afa986f98ffaa">inw</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port) {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> result;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    __asm__(<span class="stringliteral">&quot;in %%dx, %%ax&quot;</span> : <span class="stringliteral">&quot;=a&quot;</span> (result) : <span class="stringliteral">&quot;d&quot;</span> (port));</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> result;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="ports_8h.html#a409211f2d40fb98fdfe0d4b017ba60f6">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ports_8h.html#a409211f2d40fb98fdfe0d4b017ba60f6">outw</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> data) {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    __asm__(<span class="stringliteral">&quot;out %%ax, %%dx&quot;</span> : : <span class="stringliteral">&quot;a&quot;</span> (data), <span class="stringliteral">&quot;d&quot;</span> (port));</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="ttc" id="ports_8h_html_a34feca64a4f1e4dc09a64e8693f63bfa"><div class="ttname"><a href="ports_8h.html#a34feca64a4f1e4dc09a64e8693f63bfa">inb</a></div><div class="ttdeci">uint8 inb(uint16 port)</div><div class="ttdoc">Получения 8-битного значения из порта </div><div class="ttdef"><b>Definition:</b> <a href="ports_8c_source.html#l00003">ports.c:3</a></div></div>
+<div class="ttc" id="ports_8h_html_a409211f2d40fb98fdfe0d4b017ba60f6"><div class="ttname"><a href="ports_8h.html#a409211f2d40fb98fdfe0d4b017ba60f6">outw</a></div><div class="ttdeci">void outw(uint16 port, uint16 data)</div><div class="ttdoc">Передача 16-битного значения в порт </div><div class="ttdef"><b>Definition:</b> <a href="ports_8c_source.html#l00020">ports.c:20</a></div></div>
+<div class="ttc" id="ports_8h_html_a28b0dbe809800b41ca4afa986f98ffaa"><div class="ttname"><a href="ports_8h.html#a28b0dbe809800b41ca4afa986f98ffaa">inw</a></div><div class="ttdeci">uint16 inw(uint16 port)</div><div class="ttdoc">Получение 16-битного значения из порта </div><div class="ttdef"><b>Definition:</b> <a href="ports_8c_source.html#l00014">ports.c:14</a></div></div>
+<div class="ttc" id="ports_8h_html"><div class="ttname"><a href="ports_8h.html">ports.h</a></div><div class="ttdoc">Работа с портами ввода/вывода </div></div>
+<div class="ttc" id="ports_8h_html_adde48f21caf0656a9a6a054e6ea0e211"><div class="ttname"><a href="ports_8h.html#adde48f21caf0656a9a6a054e6ea0e211">outb</a></div><div class="ttdeci">void outb(uint16 port, uint8 data)</div><div class="ttdoc">ФПередача 8-битного значения в порт </div><div class="ttdef"><b>Definition:</b> <a href="ports_8c_source.html#l00010">ports.c:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

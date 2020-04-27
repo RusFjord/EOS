@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleOS: Файл library/ports.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleOS
+   </div>
+   <div id="projectbrief">Разработка простой операционной системы в учебных целях</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3d620c6b6fdb93ed3bc6186215bde2e.html">library</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл ports.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Работа с портами ввода/вывода  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;types.h&quot;</code><br />
+</div>
+<p><a href="ports_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a34feca64a4f1e4dc09a64e8693f63bfa"><td class="memItemLeft" align="right" valign="top">uint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ports_8h.html#a34feca64a4f1e4dc09a64e8693f63bfa">inb</a> (uint16 port)</td></tr>
+<tr class="memdesc:a34feca64a4f1e4dc09a64e8693f63bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получения 8-битного значения из порта  <a href="#a34feca64a4f1e4dc09a64e8693f63bfa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a34feca64a4f1e4dc09a64e8693f63bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde48f21caf0656a9a6a054e6ea0e211"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ports_8h.html#adde48f21caf0656a9a6a054e6ea0e211">outb</a> (uint16 port, uint8 data)</td></tr>
+<tr class="memdesc:adde48f21caf0656a9a6a054e6ea0e211"><td class="mdescLeft">&#160;</td><td class="mdescRight">ФПередача 8-битного значения в порт  <a href="#adde48f21caf0656a9a6a054e6ea0e211">Подробнее...</a><br /></td></tr>
+<tr class="separator:adde48f21caf0656a9a6a054e6ea0e211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b0dbe809800b41ca4afa986f98ffaa"><td class="memItemLeft" align="right" valign="top">uint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ports_8h.html#a28b0dbe809800b41ca4afa986f98ffaa">inw</a> (uint16 port)</td></tr>
+<tr class="memdesc:a28b0dbe809800b41ca4afa986f98ffaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение 16-битного значения из порта  <a href="#a28b0dbe809800b41ca4afa986f98ffaa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a28b0dbe809800b41ca4afa986f98ffaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409211f2d40fb98fdfe0d4b017ba60f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ports_8h.html#a409211f2d40fb98fdfe0d4b017ba60f6">outw</a> (uint16 port, uint16 data)</td></tr>
+<tr class="memdesc:a409211f2d40fb98fdfe0d4b017ba60f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Передача 16-битного значения в порт  <a href="#a409211f2d40fb98fdfe0d4b017ba60f6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a409211f2d40fb98fdfe0d4b017ba60f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Работа с портами ввода/вывода </p>
+<dl class="section author"><dt>Автор</dt><dd>Федор Ендовицкий (<a href="#" onclick="location.href='mai'+'lto:'+'f.e'+'nd'+'ovi'+'ts'+'kiy'+'@u'+'lte'+'am'+'8.r'+'u'; return false;">f.end<span style="display: none;">.nosp@m.</span>ovit<span style="display: none;">.nosp@m.</span>skiy@<span style="display: none;">.nosp@m.</span>ulte<span style="display: none;">.nosp@m.</span>am8.r<span style="display: none;">.nosp@m.</span>u</a>) </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>2020-04-27 </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="ports_8h_source.html">ports.h</a></p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a34feca64a4f1e4dc09a64e8693f63bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34feca64a4f1e4dc09a64e8693f63bfa">&#9670;&nbsp;</a></span>inb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8 inb </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получения 8-битного значения из порта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>номер порта </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>(uint8) получаемое значение </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="ports_8c_source.html">ports.c</a> строка <a class="el" href="ports_8c_source.html#l00003">3</a></p>
+
+</div>
+</div>
+<a id="a28b0dbe809800b41ca4afa986f98ffaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b0dbe809800b41ca4afa986f98ffaa">&#9670;&nbsp;</a></span>inw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16 inw </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение 16-битного значения из порта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>номер порта </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>(uint16) получаемое значение </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="ports_8c_source.html">ports.c</a> строка <a class="el" href="ports_8c_source.html#l00014">14</a></p>
+
+</div>
+</div>
+<a id="adde48f21caf0656a9a6a054e6ea0e211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde48f21caf0656a9a6a054e6ea0e211">&#9670;&nbsp;</a></span>outb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outb </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ФПередача 8-битного значения в порт </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>номер порта </td></tr>
+    <tr><td class="paramname">data</td><td>передаваемое значение </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="ports_8c_source.html">ports.c</a> строка <a class="el" href="ports_8c_source.html#l00010">10</a></p>
+
+</div>
+</div>
+<a id="a409211f2d40fb98fdfe0d4b017ba60f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409211f2d40fb98fdfe0d4b017ba60f6">&#9670;&nbsp;</a></span>outw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outw </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Передача 16-битного значения в порт </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>номер порта </td></tr>
+    <tr><td class="paramname">data</td><td>передаваемое значение </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="ports_8c_source.html">ports.c</a> строка <a class="el" href="ports_8c_source.html#l00020">20</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
