@@ -3,6 +3,8 @@
 #include "constants.h"
 #include "types.h"
 
+void init_cursor(uint8 cursor_start, uint8 cursor_end); 
+
 void screen_init() {
 
     clear_screen();
