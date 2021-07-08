@@ -6,7 +6,7 @@
 
 void kmain(void)
 {
-	const char *str = "Simple OS, version 0.0.1";
+	const char *str = "EOS, version 0.0.1";
 
 	screen_init();
 
