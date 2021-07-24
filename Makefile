@@ -12,7 +12,7 @@ project_structure:
 	${MKDIR} ${BUILD_DIR}
 library: boot
 	make -C ./lib
-boot: project_structure boot.asm
+boot: project_structure boot/boot.asm
 	${ASM} ${ASM_FLAGS} boot/boot.asm -o ${BUILD_DIR}/boot.o
 kernel: project_structure
 	make -C ./kernel
