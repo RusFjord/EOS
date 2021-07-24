@@ -1,8 +1,8 @@
 /*
 *  kernel.c
 */
-#include "library/string.h"
-#include "library/screen.h"
+#include "../lib/string.h"
+#include "../drivers/screen.h"
 
 void kmain(void)
 {

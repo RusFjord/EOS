@@ -1,7 +1,7 @@
 #include "screen.h"
 #include "ports.h"
-#include "constants.h"
-#include "types.h"
+#include "../include/constants.h"
+#include "../include/types.h"
 
 void init_cursor(uint8 cursor_start, uint8 cursor_end); 
 

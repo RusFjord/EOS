@@ -9,7 +9,7 @@
 #ifndef SCREEN_H
 #define SCREEN_H
 
-#include "types.h"
+#include "../include/types.h"
 
 /** @fn screen_init()
 * @brief Инициализация экрана

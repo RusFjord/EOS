@@ -1,6 +1,6 @@
 #include "string.h"
-#include "constants.h"
-#include "screen.h"
+#include "../include/constants.h"
+#include "../drivers/screen.h"
 
 void print_string(uint8 row, uint8 col, const char* str) {
 

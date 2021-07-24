@@ -9,7 +9,7 @@
 #ifndef STRING_H
 #define STRING_H
 
-#include "types.h"
+#include "../include/types.h"
 
 /**
 * @brief Вывод текста с началом в определенной строке и колонке

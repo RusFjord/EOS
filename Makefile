@@ -11,16 +11,16 @@ OBJECTS=$(wildcard $(BUILD_DIR)/*.o)
 project_structure:
 	${MKDIR} ${BUILD_DIR}
 library: boot
-	make -C ./library
+	make -C ./lib
 boot: project_structure boot.asm
-	${ASM} ${ASM_FLAGS} boot.asm -o ${BUILD_DIR}/boot.o
-kernel: project_structure kernel.c
-	${CC} ${CC_FLAGS} kernel.c -o ${BUILD_DIR}/kernel.o
+	${ASM} ${ASM_FLAGS} boot/boot.asm -o ${BUILD_DIR}/boot.o
+kernel: project_structure
+	make -C ./kernel
 link: boot kernel library link.ld
 	${LD} -m elf_i386 -T link.ld -o ${BUILD_DIR}/kernel.bin $(OBJECTS)
 iso: link
 	${MKDIR} ${BUILD_DIR}/isofiles/boot/grub
-	cp grub.cfg ${BUILD_DIR}/isofiles/boot/grub
+	cp boot/grub.cfg ${BUILD_DIR}/isofiles/boot/grub
 	cp ${BUILD_DIR}/kernel.bin ${BUILD_DIR}/isofiles/boot
 	grub-mkrescue -o ${BUILD_DIR}/simpleos.iso ${BUILD_DIR}/isofiles
 qemu: iso
