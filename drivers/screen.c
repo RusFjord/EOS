@@ -1,5 +1,5 @@
 #include "screen.h"
-#include "ports.h"
+#include "../lib/ports.h"
 #include "../include/constants.h"
 #include "../include/types.h"
 
