@@ -12,11 +12,13 @@ project_structure:
 	${MKDIR} ${BUILD_DIR}
 library: boot
 	make -C ./lib
+drivers: library 
+	make -C ./drivers
 boot: project_structure boot/boot.asm
 	${ASM} ${ASM_FLAGS} boot/boot.asm -o ${BUILD_DIR}/boot.o
 kernel: project_structure
 	make -C ./kernel
-link: boot kernel library link.ld
+link: boot kernel library drivers link.ld
 	${LD} -m elf_i386 -T link.ld -o ${BUILD_DIR}/kernel.bin $(OBJECTS)
 iso: link
 	${MKDIR} ${BUILD_DIR}/isofiles/boot/grub
