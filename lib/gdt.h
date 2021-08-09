@@ -13,21 +13,20 @@
 
 /** @struct gdt_entry_t
 * @brief Структура данных для одной записи в таблицу дескрипторов
-* @property
-* @property
-* @property
-* @property
-* @property
-* @property
+* @property limit_low - Младшие 16 битов граничного значения limit
+* @property base_low - Младшие 16 битов адресной базы
+* @property base_middle - Средние 8 битов адресной базы
+* @property base_high - Последние 8 битов адресной базы
+* @property access - Флаги доступа, определяющие в каком кольце можно использовать этот сегмент
+* @property granularity - В младших 4 битах значение limit, а в старших размер и размерность
 */
-struct gdt_entry
-{
-   uint16 limit_low;           // Младшие 16 битов граничного значения limit.
-   uint16 base_low;            // Младшие 16 битов адресной базы.
-   uint8  base_middle;         // Следующие 8 битов адресной базы.
-   uint8  access;              // Флаги доступа, определяющие в каком кольце можно использовать этот сегмент.
+struct gdt_entry {
+   uint16 limit_low;
+   uint16 base_low;
+   uint8  base_middle;
+   uint8  base_high; 
+   uint8  access;
    uint8  granularity;
-   uint8  base_high;           // Последние 8 битов адресной базы.
 } __attribute__((packed));
 typedef struct gdt_entry gdt_entry_t;
 
