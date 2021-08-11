@@ -40,4 +40,9 @@
 #define REG_SCREEN_CTRL 0x3d4
 #define REG_SCREEN_DATA 0x3d5
 
+/**
+ * @brief Количество записей таблицы дескрипторов
+ */
+#define NUM_GDT_ENTRIES 5
+
 #endif
