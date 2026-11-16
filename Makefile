@@ -24,10 +24,10 @@ iso: link
 	${MKDIR} ${BUILD_DIR}/isofiles/boot/grub
 	cp boot/grub.cfg ${BUILD_DIR}/isofiles/boot/grub
 	cp ${BUILD_DIR}/kernel.bin ${BUILD_DIR}/isofiles/boot
-	grub-mkrescue -o ${BUILD_DIR}/simpleos.iso ${BUILD_DIR}/isofiles
+	grub-mkrescue -o ${BUILD_DIR}/eos.iso ${BUILD_DIR}/isofiles
 qemu: iso
-	qemu-system-i386 build/simpleos.iso
+	qemu-system-i386 -display sdl build/eos.iso
 qemu_cd: iso
-	qemu-system-i386 -cdrom build/simpleos.iso
+	qemu-system-i386 -display sdl -cdrom build/eos.iso
 clean:
 	${RM} ${BUILD_DIR}/*
