@@ -23,8 +23,8 @@ extern void clear_screen();
 
 /** @fn set_cursor(uint8 row, uint8 col)
 * @brief Установка курсора
-* @param row Колонка курсора
-* @param col Строка курсора
+* @param row Строка курсора
+* @param col Колонка курсора
 */
 extern void set_cursor(uint8 row, uint8 col);
 
